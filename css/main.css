@@ -1,0 +1,70 @@
+* {
+    margin: 0;
+    padding: 0;  
+}
+body {
+    height: 100vh;
+    width: 100vw;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: linear-gradient(to right, rgb(145, 94, 211), rgb(50, 82, 223));
+}
+
+.structure {
+    width: auto;
+    height: auto;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: repeat(6, 50px);
+    grid-template-areas: 
+    "input input input input"
+    "ac percentage mult divide"
+    "num7 num8 num9 dot"
+    "num4 num5 num6 sub"
+    "num1 num2 num3 del"
+    "num0 num0 equals  soma";
+    gap: 2px;
+    padding: 15px 10px 10px 10px;
+    border-radius: 10px;
+}
+.structure button {
+    font-size: 1.2em;
+    cursor: pointer;
+    background: rgba(255, 255, 255, .5);
+    transition: all .2s ease;
+    border: none;
+    font-weight: bold;
+}
+.structure button:hover {
+    color: green;
+    background: #ddd;
+}
+.input{
+    grid-area: input;
+    text-align: end;
+    font-size: 1.5em;
+    background: rgba(255, 255, 255, .5);
+    padding-right: 5px;
+    outline: none;
+    border: none; 
+}
+.num0 {grid-area: num0;}
+.num1 {grid-area: num1;}
+.num2 {grid-area: num2;}
+.num3 {grid-area: num3;}
+.num4 {grid-area: num4;}
+.num5 {grid-area: num5;}
+.num6 {grid-area: num6;}
+.num7 {grid-area: num7;}
+.num8 {grid-area: num8;}
+.num9 {grid-area: num9;}
+.ac{grid-area: ac;}
+.del{grid-area: del;}
+.percentage{grid-area: percentage;}
+.mult{grid-area: mult;}
+.soma{grid-area: soma;}
+.divide{grid-area: divide;}
+.equals{grid-area: equals;}
+.sub{grid-area: sub;}
+.dot{grid-area: dot;}
